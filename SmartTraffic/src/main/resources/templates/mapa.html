@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de tráfico</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Mapa de la Ciudad</h1>
+    <p>Las ciudades representan nodos y las rutas representan aristas de un grafo no dirigido.</p>
+
+    <div class="section">
+        <h2>Ciudades registradas</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Ciudad</th>
+                <th>Nivel de tráfico</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="ciudad : ${ciudades}">
+                <td th:text="${ciudad.nombre}"></td>
+                <td th:text="${ciudad.nivelTrafico + '%'}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Rutas del grafo</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Distancia</th>
+                <th>Tiempo estimado</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="ruta : ${rutas}">
+                <td th:text="${ruta.origen}"></td>
+                <td th:text="${ruta.destino}"></td>
+                <td th:text="${ruta.distancia + ' km'}"></td>
+                <td th:text="${ruta.tiempoEstimado + ' min'}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Representación visual del grafo</h2>
+
+        <div class="graph-box">
+            <p>Centro → Norte → Este → Aeropuerto</p>
+            <p>Centro → Sur → Oeste → Aeropuerto</p>
+            <p>Norte → Oeste</p>
+        </div>
+    </div>
+
+    <a href="/" class="btn">Volver al inicio</a>
+</div>
+
+</body>
+</html>

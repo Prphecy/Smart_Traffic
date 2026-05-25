@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+h2 {
+    color: #7dd3fc;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #cbd5e1;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0369a1;
+    transform: scale(1.05);
+}
+
+.secondary {
+    background: #16a34a;
+}
+
+.secondary:hover {
+    background: #15803d;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.section {
+    background: #1e293b;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+th {
+    background: #0284c7;
+    padding: 12px;
+}
+
+td {
+    background: #334155;
+    padding: 12px;
+    text-align: center;
+}
+
+.result {
+    background: #020617;
+    padding: 15px;
+    border-radius: 12px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.graph-box {
+    background: #020617;
+    padding: 20px;
+    border-radius: 15px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+ul {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Algoritmos</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Recorridos del Grafo</h1>
+  <p>En esta sección se ejecutan BFS y DFS desde la ciudad Centro.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h2>BFS</h2>
+      <p>Recorrido por amplitud usando una cola FIFO.</p>
+
+      <div class="result">
+        <span th:each="nodo : ${bfs}" th:text="${nodo + ' → '}"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>DFS</h2>
+      <p>Recorrido por profundidad usando recursividad.</p>
+
+      <div class="result">
+        <span th:each="nodo : ${dfs}" th:text="${nodo + ' → '}"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Historial de consultas</h2>
+    <p>Este historial se maneja con una pila Stack, aplicando comportamiento LIFO.</p>
+
+    <ul>
+      <li th:each="item : ${historial}" th:text="${item}"></li>
+    </ul>
+  </div>
+
+  <a href="/" class="btn">Volver al inicio</a>
+</div>
+
+</body>
+</html>

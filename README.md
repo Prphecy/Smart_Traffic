@@ -65,3 +65,4 @@ Luego abrir en el navegador:
 ```text
 http://localhost:8080
 ```
+**IMPORTANTE:** Si se requiere mas información del proyecto, leer el PDF anexado en la entrega de TEAMS titulado "SmartTraffic MVC 1"
